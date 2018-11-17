@@ -1,0 +1,8 @@
+
+<form novalidate [formGroup]="login">
+  <table>
+    <tr> <td>login :</td> <td><input type="text" formControlName="login" name="login" required /></td> </tr>
+    <tr> <td>password :</td> <td><input type="password" formControlName="passsword" name="password" required /></td> </tr>
+    <tr><td><button type="submit" (click)="submit(login.value)" [disabled]="login.invalid">connect</button></td></tr>
+  </table>
+</form>
