@@ -1,11 +1,11 @@
-import {Component, EventEmitter, Input, OnChanges} from '@angular/core';
+import {Component, EventEmitter, OnChanges, Output} from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { Login } from '../../shared/interfaces/login';
 
 
 @Component({
-  selector: 'login',
+  selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -13,25 +13,38 @@ export class LoginComponent implements OnChanges
 {
 
   private readonly _form: FormGroup;
+  private readonly _submit$: EventEmitter<Login>;
+
   private _login_data: Login;
 
 
-  private readonly _submit$: EventEmitter<Login>;
-
   constructor ()
   {
+    this._submit$ = new EventEmitter<Login>();
     this._form = this._buildForm();
   }
 
 
-  @Input
-  set
+
+  get form(): FormGroup {
+    return this._form;
+  }
+
+  @Output('submit')
+  get submit$(): EventEmitter<Login> {
+    return this._submit$;
+  }
+
+  get login(): Login {
+    return this._login_data;
+  }
+
 
 
   ngOnChanges (record)
   {
     if (record.model && record.model.currentValue) {
-      //
+      //this._form.patchValue(this._login_data);
     }
     else {
       this._login_data = {
@@ -41,10 +54,10 @@ export class LoginComponent implements OnChanges
     }
   }
 
-  @Output('submit')
-  get submit$(): EventEmitter<Login> {
-    return this._submit$;
+  submit(login: Login) {
+    this._submit$.emit(login);
   }
+
 
 
   _buildForm (): FormGroup {
