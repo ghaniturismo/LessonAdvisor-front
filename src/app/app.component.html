@@ -1,4 +1,37 @@
+<section [ngSwitch]="view">
 
-<router-outlet>
-  <app-login></app-login>
-</router-outlet>
+  <section *ngSwitchCase="'connection'">
+    <div class="card" style="width: 20rem;">
+      <form style="margin: 20px;">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Username</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input">
+            Check me out
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="switchView()">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  --<section *ngSwitchCase="'connected'">
+    <app-header></app-header>
+    <div class="container">
+
+      <router-outlet></router-outlet>
+
+      <app-footer></app-footer>
+    </div>
+  </section>
+
+</section>
+
+
