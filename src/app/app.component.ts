@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-import {Login} from "../shared/interfaces/login";
 
 @Component({
   selector: 'app-root',
@@ -9,8 +8,9 @@ import {Login} from "../shared/interfaces/login";
 })
 export class AppComponent
 {
-  private _login_data: Login;
-
-
+	
+	constructor ()
+	{}
+	
 
 }

@@ -1,4 +1,15 @@
 
-form{
+section {
+	display: inline-block;
+	float: right;
+	
+	margin:20px;
+}
 
+td {
+	text-align:right;
+}
+
+input {
+	width:220px;
 }

@@ -1,3 +1,6 @@
+import { BACKEND } from './backend';
+
 export const environment = {
-  production: true
+	production: false,
+	backend: BACKEND
 };
