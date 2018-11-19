@@ -1,10 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  background-color: #FAFAFA;
-  -webkit-font-smoothing: antialiased;
+  padding-top: 5rem;
+  margin: auto;
+  width: 40%;
+  background-attachment: fixed;
 }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+
 * /deep/ * {
   font-family: inherit;
   font-size: 14px;
