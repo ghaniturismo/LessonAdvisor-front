@@ -1,0 +1,129 @@
+<div class="container">
+  <div class="row prsentation">
+    <div class="col-12 form-group">
+            <img class="avatar" src="{{ org.img }}">
+            <a class="nb-btn-cloud info-mar" (click)="infoSection=true;">
+              <img src="../../../assets/img/info.png" class="fa">
+              <p>Informations</p>
+            </a>
+            <a class="nb-btn-cloud discuss-marg" (click)="infoSection=false;">
+              <img src="../../../assets/img/5982-200.png" class="fa cms">
+              <p>Commentaires</p>
+            </a>
+    </div>
+  </div>
+  <div class="row detail tab-container" id="style-1" *ngIf="infoSection">
+    <div class="col-6">
+      <div class=" row control-container">
+        <div class="col-1"></div>
+        <label class=" col-2 label-title">Nom</label>
+        <label class=" col-9 label-contentent"> {{ org.name }}</label>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-1"></div>
+        <a class="avatar2 col-2">
+          <img src="../../../assets/img/home.png" class="fa">
+        </a>
+        <div class="col-6 ">
+          <span class="label row">{{org.address.street}}  </span>
+          <span class="label row">{{org.address.postalCode}}, {{org.address.city}}  </span>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-1"></div>
+        <a class="avatar2 col-2">
+          <img src="../../../assets/img/contact.png" class="fa">
+        </a>
+        <div class="col-7">
+          <span class="label row">Tel   : {{org.phone}}</span>
+          <span class="label row">Email : {{org.email}} </span>
+          <span class="label row">site  : {{org.website}} </span>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-1"></div>
+        <a class="avatar2 col-2">
+          <img src="../../../assets/img/Calendar-Time.png" class="fa">
+        </a>
+        <div class="col-7">
+          <span class="label row">{{org.openingHours}} </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <br>
+      <div class="row">
+        <div class="col-1"></div>
+        <a class="avatar2 col-2">
+          <img src="../../../assets/img/description.png" class="fa">
+        </a>
+        <div class="col-7">
+          <span class="label row"> {{org.description}}</span>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-1"></div>
+        <a class="avatar2 col-2">
+          <img src="../../../assets/img/personel.png" class="fa">
+        </a>
+        <div class="col-6 ">
+          <span class="label row"> {{org.staffNumber}}</span>
+        </div>
+      </div>
+
+      <br>
+      <div class="row">
+        <div class="col-1"></div>
+        <a class="avatar2 col-2">
+          <img src="../../../assets/img/candition.svg" class="fa">
+        </a>
+        <div class="col-6 ">
+          <span class="label row"> {{org.admissionConditions}}. La limite d'age est : {{org.ageLimits}}  </span>
+        </div>
+      </div>
+      <br>
+
+    </div>
+  </div>
+
+  <div class="row discuss tab-container" id="style-2" *ngIf="!infoSection">
+
+    <br>
+    <a class="nb-btn-circle" (click)="ajouterCommentaire()">
+      <img src="../../../assets/img/commenter.png" class="fa">
+      <span class="indicator-dot">+</span>
+    </a>
+
+    <br *ngIf="commenter">
+    <div class="chat" *ngIf="commenter">
+      <div class="row">
+        <a href="#">@ {{user.nom}} :</a>
+      </div>
+      <div class="row">
+        <input type="text" class="msgTexWrit" #comment>
+      </div>
+      <div class="row">
+        <a (click)="saveComment()"  class="indicator-dot2">
+          <p>+</p></a>
+      </div>
+    </div>
+
+    <div *ngFor="let cmt of org.comments">
+      <br>
+      <div class="chat">
+        <div class="row">
+          <a href="#">@ {{cmt.user.nom}} :</a>
+        </div>
+        <div class="row">
+          <p class="msgTex">{{cmt.text}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

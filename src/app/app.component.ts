@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,29 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // private property to store view value
-  private _view: string;
+  title = 'app';
 
-  /**
-   * Returns private property _view
-   *
-   * @return string
-   */
-  get view(): string {
-    return this._view;
-  }
-
-  /**
-   * Component constructor
-   */
-  constructor() {
-    this._view = 'connection';
-  }
-
-  /**
-   * Function to switch view
-   */
-  switchView() {
-    this._view = (this._view === 'connection') ? 'connected' : 'connection';
-  }
 }
