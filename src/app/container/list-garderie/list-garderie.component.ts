@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Organisation} from '../../shared/models/organisation';
+import {LessonPlace} from '../../shared/models/lessonPlace';
 import {ActivatedRoute, Router} from '@angular/router';
 import {OrgService} from '../../shared/services/org-service/org-service.component';
 
@@ -9,7 +9,7 @@ import {OrgService} from '../../shared/services/org-service/org-service.componen
   styleUrls: ['./list-garderie.component.css']
 })
 export class ListGarderieComponent implements OnInit {
-  Orgs: Organisation[];
+  Orgs: LessonPlace[];
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private orgService: OrgService) {
   }
@@ -22,7 +22,7 @@ export class ListGarderieComponent implements OnInit {
   }
 
   redirigerDetail(index: number): void {
-    this.router.navigate(['espaceCreche/detail', index]);
+    this.router.navigate(['lessonadvisor/detail', index]);
   }
 
 

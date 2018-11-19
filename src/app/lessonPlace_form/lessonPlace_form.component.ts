@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Organisation} from '../shared/models/organisation';
+import {LessonPlace} from '../shared/models/lessonPlace';
 import {Adresse} from '../shared/models/Adresse';
 import {OrgService} from '../shared/services/org-service/org-service.component';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-org-form',
-  templateUrl: './org-form.component.html',
-  styleUrls: ['./org-form.component.css']
+  templateUrl: './lessonPlace_form.component.html',
+  styleUrls: ['./lessonPlace_form.component.css']
 })
-export class OrgFormComponent implements OnInit {
+export class LessonPlace_formComponent implements OnInit {
   public formOrg: FormGroup;
-  public org: Organisation;
+  public org: LessonPlace;
   public adr: Adresse;
   public submited: boolean;
 
@@ -68,7 +68,7 @@ export class OrgFormComponent implements OnInit {
       this.formOrg.get('effect').valid &&
       this.formOrg.get('photo').valid ) {
       this.adr = new Adresse(this.formOrg.get('rue').value, this.formOrg.get('code').value, this.formOrg.get('ville').value);
-      this.org = new Organisation(this.formOrg.get('name').value,
+      this.org = new LessonPlace(this.formOrg.get('name').value,
         '',
         this.formOrg.get('photo').value,
         this.formOrg.get('email').value,

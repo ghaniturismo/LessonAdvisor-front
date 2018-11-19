@@ -1,5 +1,5 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {Organisation} from '../../shared/models/organisation';
+import {LessonPlace} from '../../shared/models/lessonPlace';
 import {OrgService} from '../../shared/services/org-service/org-service.component';
 import {ActivatedRoute, Router} from '@angular/router';
 import {LogService} from '../../shared/services/log-service/log-service.component';
@@ -14,7 +14,7 @@ import {Personne} from "../../shared/models/Personne";
 })
 export class OrgDetailsComponent implements OnInit {
 
-  public org: Organisation;
+  public org: LessonPlace;
   public user: Personne;
   @ViewChild('comment') public el: ElementRef;
 

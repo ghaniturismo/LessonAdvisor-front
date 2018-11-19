@@ -5,32 +5,14 @@ import { ListGarderieComponent } from './container/list-garderie/list-garderie.c
 import { ContainerComponent } from './container/container.component';
 import { OrgDetailsComponent } from './container/org-details/org-details.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { PersonFormComponent } from './person-form/person-form.component';
-import { OrgFormComponent } from './org-form/org-form.component';
+import { User_profilComponent } from './user_profil/user_profil.component';
 import { HomeComponent } from './home/home.component';
-import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { LogService } from './shared/services/log-service/log-service.component';
 import { OrgService } from './shared/services/org-service/org-service.component';
-
-
-const appRoutes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'profil/:mode', component: PersonFormComponent },
-  { path: 'org', component: OrgFormComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'lessonadvisor', component: ContainerComponent , children: [
-    { path: 'list', component: ListGarderieComponent },
-    { path: 'detail/:index', component: OrgDetailsComponent }
-  ]},
-  { path: '',
-    redirectTo: '/login',
-    pathMatch: 'full'
-  },
-  { path: '**', component: HomeComponent }
-];
-
+import {LessonPlace_formComponent} from './lessonPlace_form/lessonPlace_form.component';
+import {APP_ROUTES} from './app.routes';
 
 @NgModule({
   declarations: [
@@ -38,8 +20,8 @@ const appRoutes: Routes = [
     ListGarderieComponent,
     ContainerComponent,
     OrgDetailsComponent,
-    PersonFormComponent,
-    OrgFormComponent,
+    User_profilComponent,
+    LessonPlace_formComponent,
     HomeComponent,
     LoginComponent,
   ],
@@ -49,7 +31,7 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    APP_ROUTES
   ],
   providers: [
     OrgService,

@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   }
 
   redirigerList(): void {
-    this.router.navigate(['espaceCreche/list']);
+    this.router.navigate(['lessonadvisor/list']);
   }
 
   allerHome(): void {

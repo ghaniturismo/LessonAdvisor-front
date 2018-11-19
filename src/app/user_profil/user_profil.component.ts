@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Personne} from '../shared/models/Personne';
 import {LogService} from '../shared/services/log-service/log-service.component';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-person-form',
-  templateUrl: './person-form.component.html',
-  styleUrls: ['./person-form.component.css']
+  templateUrl: './user_profil.component.html',
+  styleUrls: ['./user_profil.component.css']
 })
-export class PersonFormComponent implements OnInit {
+export class User_profilComponent implements OnInit {
 
   public mode: number;
   public user: Personne;
@@ -22,7 +22,7 @@ export class PersonFormComponent implements OnInit {
       this.logService.getCurrentUser().subscribe( (value: Personne) => {
         this.user = value;
       });
-    }else {
+    } else {
       this.user = new Personne('', '', '', '', '', '', '', '');
     }
   }
@@ -60,11 +60,7 @@ export class PersonFormComponent implements OnInit {
 
     this.logService.setCurrentUser(this.user);
     console.log(this.user.nom);
-    /*
-    this.logService.getCurrentUser().subscribe( value => {
-      this.user = value;
-    });*/
-   // this.router.navigate(['profil', 2]);
+
   }
 
 

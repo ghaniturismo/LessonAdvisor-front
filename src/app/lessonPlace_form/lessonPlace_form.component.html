@@ -5,7 +5,7 @@
       <ul>
         <li> <a (click)="allerHome()">LessonAdvisor</a></li>
         <li> <a (click)="allerProfil()">Mon profil</a></li>
-        <li> <a (click)="allercreche()">Poster</a></li>
+        <li> <a (click)="allercreche()">Poster une sceance de cours</a></li>
       </ul>
     </div>
   </div>
@@ -94,51 +94,13 @@
          style="color:#EF5350; margin-left: 70%;">  Invalide</p>
     </div>
     <div class="form-group row">
-      <label>Horaires D'ouverture</label>
+      <label>nombre de personne</label>
       <input
         class="form-control"
         type="text"
-        formControlName="horraire">
+        formControlName="nbperson">
     </div>
-    <div class="form-group row">
-      <label>Condions d'admission</label>
-      <input
-        class="form-control"
-        type="email"
-        formControlName="condition">
-    </div>
-    <div class="form-group row">
-      <div class="col-6">
-        <label>Age Limite (entre 0 et 9)</label>
-        <input
-          class="form-control col-9"
-          type="number"
-          name="age"
-          formControlName="age">
-        <p *ngIf="formOrg.get('age').hasError('min')"
-           style="color:#EF5350; margin-left: 50%;">  Invalide!</p>
-        <p *ngIf="formOrg.get('age').hasError('max')"
-           style="color:#EF5350; margin-left: 50%;">  Invalide!</p>
-      </div>
-      <div class="col-6">
-        <label>Capacité</label>
-        <input
-          class="form-control col-9"
-          type="number"
-          formControlName="capacity">
-        <p *ngIf="formOrg.get('capacity').hasError('min')"
-           style="color:#EF5350; margin-left: 50%;">  Invalide!</p>
-      </div>
-      <div class="col-6">
-        <label>Effectif</label>
-        <input
-          class="form-control col-9"
-          type="number"
-          formControlName="effect">
-        <p *ngIf="formOrg.get('effect').hasError('min')"
-           style="color:#EF5350; margin-left: 50%;">  Invalide!</p>
-      </div>
-    </div>
+
     <div class="form-group row">
       <label>Description</label>
       <input

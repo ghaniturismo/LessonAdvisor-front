@@ -1,7 +1,7 @@
 import {Comment} from './Comment';
 import {Adresse} from './Adresse';
 
-export class Organisation {
+export class LessonPlace {
   public name: string;
   public adresse: string;
   public img: string;
@@ -11,11 +11,7 @@ export class Organisation {
   public website: string;
   public address: Adresse;
   public description: string;
-  public staffNumber: number;
-  public openingHours: string;
-  public admissionConditions: string;
   public capacity: number;
-  public ageLimits: string;
   public comments: Comment[];
 
 
@@ -41,11 +37,7 @@ export class Organisation {
     this.website = website;
     this.address = address;
     this.description = description;
-    this.staffNumber = staffNumber;
-    this.openingHours = openingHours;
-    this.admissionConditions = admissionConditions;
     this.capacity = capacity;
-    this.ageLimits = ageLimits;
     this.comments = comments;
   }
 
