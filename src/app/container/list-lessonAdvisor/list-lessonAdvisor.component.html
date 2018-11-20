@@ -1,36 +1,34 @@
 <ul class="list-group">
   <li class="item-box list-group-item form-group row" *ngFor="let org of Orgs; let index = index">
-    <div class="col-4">
-      <img class="avatar" src="{{org.img}}">
-    </div>
-    <div class="col-8">
-      <br><br>
-      <div class="row">
-        <div class="col-form-label label col-2">Nom :</div>
-        <div class="col-form-label label col-8">{{org.name}}</div>
-      </div>
-      <div class="row">
-        <div class="col-form-label label col-2">Contacts : </div>
-        <div class="col-form-label label col-10">{{org.phone}}</div>
-        <div class="col-2"></div>
-        <div class="col-form-label label col-9">{{org.email}}</div>
 
-      </div>
-      <div class="row">
-        <div class="col-form-label label">Adresse:
-          <a> {{org.adresse }} </a></div>
-      </div>
-      <div class="row">
-        <div class="col-10"></div>
-        <div class="col-2">
-          <a  class="nb-btn-circle" (click)="redirigerDetail(index)">
-            <img src="../../../assets/img/5982-200.png" class="fa">
-            <p>Comments</p>
-            <span class="indicator-dot">6</span>
-          </a>
-        </div>
-      </div>
-    </div>
+    <table>
+      <tr>
+        <td>
+            <img class="avatar" src="{{org.img}}">
+        </td>
+        <td>
+              <div class="col-form-label label ">Nom : </div>
+              <div class="col-form-label label ">Contacts : </div>
+              <div class="col-form-label label ">mail: </div>
+              <div class="col-form-label label ">Adresse:</div>
+        </td>
+        <td>
+          <div class="col-form-label label ">{{org.name}}</div>
+          <div class="col-form-label label ">{{org.phone}}</div>
+          <div class="col-form-label label ">{{org.email}}</div>
+          <div class="col-form-label label ">{{org.adresse }}</div>
+        </td>
+      </tr>
+      <tr>
+        <a  class="nb-btn-circle" (click)="redirigerDetail(index)">
+          <div class="fa"></div>
+          <p>Comments</p>
+          <span class="indicator-dot">6</span>
+        </a>
+      </tr>
+    </table>
+
+
   </li>
 
 </ul>

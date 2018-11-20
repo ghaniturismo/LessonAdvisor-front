@@ -1,3 +1,4 @@
+
 .item-box {
   top:10px;
   left: 60px;
@@ -33,7 +34,7 @@ li:not(:last-child) {
   -webkit-border-radius: 50%;
   -khtml-border-radius: 50%;
   border: 1px solid #ddd;
-  background: #00897B;
+  background: #892533;
   transition:all 0.4s ease-in-out;
 }
 .nb-btn-circle:hover{
@@ -75,6 +76,5 @@ li:not(:last-child) {
   -khtml-border-radius: 50%;
   -moz-border-radius: 50%;
   color: #fff;
-  background-color: #D9534F;
-  background-image: none;
+  background: #D9534F none;
 }
