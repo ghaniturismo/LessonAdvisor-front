@@ -1,0 +1,16 @@
+.user_button
+{
+  border: none;
+  color: white;
+  background: rgba(0,0,0,0.7);
+  text-align: center;
+  border-radius: 5px;
+  min-width:50px;
+  padding:10px;
+}
+
+.user_button:hover
+{
+	background-color: #3D8E8E;
+	cursor: pointer;
+}

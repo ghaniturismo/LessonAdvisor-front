@@ -1,9 +1,16 @@
-.global-container{
+
+
+section
+{
+	height: 100%;
+	
   font-family: Arial, sans-serif;
   background-image: url("../../assets/img/login.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+
 .panel{
   border: 0px solid #fff;
   -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.60);
@@ -65,27 +72,4 @@ h5{
   font-size: 24px;
 }
 
-#nav {
-  width: 100%;
-  height: 60px;
-  background: rgba(0,0,0,0.8);
-  box-shadow: -1px 4px 26px 2px rgba(0,0,0,0.75 );
-  max-height:500px;
-}
-#nav-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-}
-#nav-wrapper ul li{
-  list-style: none;
-  display: inline;
-  font-weight: bold;
-  padding-left: 98px;
-}
-#nav-wrapper a {
-  color: #00897B;
-  margin-top: 10px;
-}
-#nav-wrapper a:hover{
-  color: orange;
-}
+

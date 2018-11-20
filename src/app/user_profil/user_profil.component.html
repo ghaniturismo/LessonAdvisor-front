@@ -1,100 +1,59 @@
 
-<div class="list-background" id="style-1">
-  <div id="nav">
-    <div id="nav-wrapper">
-      <br>
-      <ul>
-        <li> <a (click)="allerHome()">LessonAdvisor</a></li>
-        <li> <a (click)="allerProfil()">Mon profil</a></li>
-        <li> <a (click)="allercreche()">Poster une sceance de cours</a></li>
-      </ul>
-    </div>
-  </div>
-  <br>
-  <div class="row" >
-    <div class="form-box">
-      <form [formGroup]="formCreate" (ngSubmit)="editer()">
-        <div class="form-group row">
-          <label class="label2" *ngIf="mode == 1">Nouveau Profil</label>
-          <img class="avatar" *ngIf="mode == 2" src="{{user.img}}">
-        </div>
-        <div class="form-group row">
-          <label class="col-6">Nom complet *</label>
-          <label class="col-6"  *ngIf="mode == 2" class="labelInfo">{{user.nom}}</label>
-          <input
-            *ngIf="mode == 1"
-            formControlName="nom"
-            class="form-control"
-            type="text"
-            placeholder="nom prénom">
-        </div>
-        <div class="form-group row">
-          <label class="col-6">Ville</label>
-          <label class="col-6" *ngIf="mode == 2" class="labelInfo">{{user.ville}}</label>
-          <input
-            *ngIf="mode == 1"
-            formControlName="ville"
-            class="form-control"
-            type="text">
-        </div>
-        <div class="form-group row">
-          <label class="col-6">Téléphone</label>
-          <label class="col-6" *ngIf="mode == 2" class="labelInfo">{{ user.tel }}</label>
-          <input
-            *ngIf="mode == 1"
-            class="form-control"
-            formControlName="tel"
-            type="text">
-        </div>
-        <div class="form-group row">
-          <label class="col-6">Email *</label>
-          <label class="col-6" *ngIf="mode == 2" class="labelInfo">{{user.email}}</label>
-          <input
-            *ngIf="mode == 1"
-            class="form-control"
-            formControlName="email"
-            type="email"
-            placeholder="email">
-        </div>
-        <div class="form-group row" *ngIf="mode == 1">
-          <label class="col-6">Confirmation email</label>
-          <input
-            class="form-control"
-            type="email"
-            placeholder="confirmaton adresse email">
-        </div>
-        <div class="form-group row" *ngIf="mode == 1">
-          <label class="col-6">Mot de passe *</label>
-          <input
-            class="form-control"
-            type="text"
-            formControlName="pwd">
-        </div>
-        <div class="form-group row" *ngIf="mode == 1">
-          <label class="col-9" >Conformation Mot de passe</label>
-          <input
-            class="form-control"
-            type="text"
-            placeholder="confirmer votre mot de passe">
-        </div>
-        <div class="form-group row" *ngIf="mode == 1">
-          <label class="col-6">Photo</label>
-          <input
-            class="form-control"
-            type="text"
-            formControlName="img"
-            placeholder=" URL">
-        </div>
-        <br>
-             <button class="btn btn-primary" *ngIf="mode == 1" >Valider</button>
-        <br>
-        <br>
-      </form>
-    </div>
+<section>
 
-  </div>
-  <div class="row">
-  </div>
+<nav>
+<br>
+	<ul>
+	<li> <a (click)="allerHome()">LessonAdvisor</a></li>
+	<li> <a (click)="allerProfil()">Mon profil</a></li>
+	<li> <a (click)="allerOrg()">Poster une sceance de cours</a></li>
+	</ul>
+</nav>
 
-</div>
+<form [formGroup]="formCreate" (ngSubmit)="create()" >
+<table>
+	<tr>
+		<td colspan="2" *ngIf="mode == 1" class="title" >Nouveau Profil</td>
+		<td colspan="2" *ngIf="mode == 2"> <img class="avatar" *ngIf="mode == 2" src="{{user.img}}"> </td>
+	</tr>
+	<tr>
+		<td class="label" >Nom complet :</td>
+		<td><input *ngIf="mode == 1" formControlName="nom" class="form-control" type="text" placeholder="nom prénom" /></td>
+		<label *ngIf="mode == 2" >{{user.nom}}</label>
+	</tr>
+	<tr>
+		<td class="label" >Ville :</td>
+		<td><input *ngIf="mode == 1" formControlName="ville" class="form-control" type="text" /></td>
+		<label *ngIf="mode == 2" >{{user.ville}}</label>
+	</tr>
+	<tr>
+		<td class="label" >Telephone :</td>
+		<td><input *ngIf="mode == 1" formControlName="tel" class="form-control" type="text" /></td>
+		<label *ngIf="mode == 2" >{{user.tel}}</label>
+	</tr>
+	<tr>
+		<td class="label" >Email :</td>
+		<td><input *ngIf="mode == 1" formControlName="email" class="form-control" type="text" /></td>
+		<label *ngIf="mode == 2" >{{user.email}}</label>
+	</tr>
+	<tr *ngIf="mode == 1" >
+		<td class="label" >Confirmation Email :</td>
+		<td><input class="form-control" type="email" placeholder="confirme email" /></td>
+	</tr>
+	<tr *ngIf="mode == 1">
+		<td class="label" >Mot de passe :</td>
+		<td><input *ngIf="mode == 1" formControlName="pwd" class="form-control" type="password" /></td>
+	</tr>
+	<tr *ngIf="mode == 1">
+		<td class="label" >Confirmation du mot de passe :</td>
+		<td><input *ngIf="mode == 1" class="form-control" type="password" /></td>
+	</tr>
+	<tr *ngIf="mode == 1">
+		<td class="label" >Photo :</td>
+		<td><input *ngIf="mode == 1" class="form-control" type="text" placeholder="URL" /></td>
+	</tr>
+	<button *ngIf="mode == 1" class="user_button" >Valider</button>
+</table>
+</form>
 
+</section>
