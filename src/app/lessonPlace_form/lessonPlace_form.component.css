@@ -3,7 +3,7 @@ header
 {
 	text-align:center;
 	color: #F9DF05;
-	
+
 	font-family: "Noto Sans CJK SC Bold";
 	font-variant: small-caps;
 	font-size: 28px;
@@ -13,7 +13,7 @@ header
 {
 	text-align:center;
 	color: #F9DF05;
-	
+
 	font-family: "Noto Sans CJK SC Bold";
 	font-variant: small-caps;
 	font-size: 28px;
@@ -22,11 +22,11 @@ header
 form
 {
 	padding: 50px;
-	margin-top:30px;
+	margin-top:50px;
 	margin-left:30%;
-	
+  margin-right: 30%;
+
 	color: #F9DF05;
-	
 	background: rgba(0,0,0,0.5);
 	box-shadow: -1px 4px 26px 2px rgba(0,0,0,0.75);
 }

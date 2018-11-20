@@ -23,7 +23,7 @@ import {APP_ROUTES} from './app.routes';
     User_profilComponent,
     LessonPlace_formComponent,
     HomeComponent,
-    LoginComponent,
+    LoginComponent
   ],
   imports: [
     BrowserAnimationsModule,
