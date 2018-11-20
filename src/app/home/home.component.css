@@ -12,18 +12,18 @@ section
 
 .panel{
   border: 0px solid #fff;
-  width: 60%;
-  -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.60);
-  -moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.60);
+  width: 45%;
   box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.60);
-  background-color: rgba(0,0,0,0.5);
-  color: #ffffff;
+  background-color: rgba(0,0,0,0.6);
   padding-top: 5%;
   border-radius: 5%;
   position: relative;
   transition: 1s;
   right:5%;
   left: 5%;
+  margin-top: 40px;
+  color: white;
+  text-shadow:0.1em 0.1em 0.5em white;
 }
 h5{
   text-align: right;
