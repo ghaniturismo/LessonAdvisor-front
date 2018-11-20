@@ -22,12 +22,10 @@ section
 form
 {
   margin-top:30px;
-  margin-left:30%;
-  width: 500px;
-  height: 500px;
+  margin-left:5%;
+  margin-right:5%;
   background: rgba(0,0,0,0.5);
   box-shadow: -1px 4px 26px 2px rgba(0,0,0,0.75 );
-  overflow-x: hidden;
 }
 
 .label
@@ -37,12 +35,10 @@ form
 
 .avatar
 {
-  width: 400px;
+  width: 200px;
   height: 200px;
   margin-left: 60px;
   border-radius: 50%;
-  top: -50%;
-  left: calc(50% - 50px);
 }
 
 

@@ -34,9 +34,9 @@ section
 {
 	position: fixed;
 	
-	left:20%;
-	top:30%;
-	right:20%;
+    left:20%;
+    top:30%;
+    right:20%;
 	border: 0px solid #fff;
 	
 	box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);

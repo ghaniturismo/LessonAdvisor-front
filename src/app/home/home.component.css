@@ -13,39 +13,38 @@ section
 
 .panel{
   border: 0px solid #fff;
+  width: 60%;
   -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.60);
   -moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.60);
   box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.60);
   background-color: rgba(0,0,0,0.5);
   color: #ffffff;
-  padding-top: 9%;
+  padding-top: 5%;
   border-radius: 5%;
   position: relative;
   transition: 1s;
+  right:5%;
+  left: 5%;
 }
 h5{
   text-align: right;
-  color: #f93d4d;
-  margin-left: 5px;
-  margin-right: 50px;
+  color: #080004;
 }
 .panel:hover{
   background: rgba(0,0,0,0.0);
 }
 .lock{
   position: absolute;
-  top: 20px;
+  top: 5px;
   width: 100px;
   height: 100px;
   line-height: 100px;
   text-align: center;
-  left: 0%;
+  left: 1%;
   background: rgba(0,0,0,0.1) !important;
   border: 3px outset #23daf9;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
-  -ms-border-radius: 100%;
-  -o-border-radius: 100%;
   border-radius: 100%;
   -webkit-box-shadow: -1px 4px 26px 11px  rgba(255,255,255,0.5);
   -moz-box-shadow: -1px 4px 26px 11px  rgba(255,255,255,0.5);
