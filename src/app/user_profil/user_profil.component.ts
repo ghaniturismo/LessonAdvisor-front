@@ -68,4 +68,10 @@ export class User_profilComponent implements OnInit
 
   }
 
+
+	editer (values :any) : void
+	{
+		this.mode = 1;
+	}
+
 }

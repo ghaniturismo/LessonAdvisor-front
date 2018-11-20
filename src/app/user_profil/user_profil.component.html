@@ -18,7 +18,7 @@
 	</tr>
 	<tr>
 		<td class="label" >Nom complet :</td>
-		<td><input *ngIf="mode == 1" formControlName="nom" class="form-control" type="text" placeholder="nom prénom" /></td>
+		<td><input *ngIf="mode == 1" formControlName="nom" class="form-control" type="text" placeholder="nom prenom" /></td>
 		<label *ngIf="mode == 2" >{{user.nom}}</label>
 	</tr>
 	<tr>
@@ -50,9 +50,10 @@
 	</tr>
 	<tr *ngIf="mode == 1">
 		<td class="label" >Photo :</td>
-		<td><input *ngIf="mode == 1" class="form-control" type="text" placeholder="URL" /></td>
+		<td><input *ngIf="mode == 1" class="form-control" type="text" placeholder="URL" formControlName="img"/></td>
 	</tr>
-	<button *ngIf="mode == 1" class="user_button" >Valider</button>
+	<input type="submit" *ngIf="mode == 1" class="user_button" value="Valider" />
+	<button *ngIf="mode == 2" class="user_button" (click)="editer(formCreate.value)">Editer</button>
 </table>
 </form>
 
