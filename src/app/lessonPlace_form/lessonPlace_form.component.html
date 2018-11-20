@@ -1,131 +1,89 @@
-<div class="list-background" id="style-1">
-  <div id="nav">
-    <div id="nav-wrapper">
-      <br>
-      <ul>
-        <li> <a (click)="allerHome()">LessonAdvisor</a></li>
-        <li> <a (click)="allerProfil()">Mon profil</a></li>
-        <li> <a (click)="allercreche()">Poster une sceance de cours</a></li>
-      </ul>
-    </div>
-  </div>
-  <br>
-  <div class="row" >
 
-<div class="form-box">
-  <form [formGroup]='formOrg' (ngSubmit)="creerCreche()" >
-    <div class="form-group row">
-      <label class="label2">Informations LessonAdvisor</label>
-    </div>
-    <div class="form-group row">
-      <label>Nom complet*</label>
-      <input
-        class="form-control"
-        type="text"
-        formControlName="name"
-        placeholder="nom">
-      <p *ngIf="formOrg.get('name').hasError('required') && submited"
-         style="color:#EF5350; margin-left: 88%;">  Requis!</p>
-    </div>
-    <div class="form-group row">
-      <label>Adresse*</label>
-      <div class="col-1"></div>
-      <div class="col-11">
-        <div class="row">
-          <div class="col-8">
-            <label class="sous-lab">Ville</label>
-            <input
-              class="form-control"
-              formControlName="ville"
-              type="text">
-            <p *ngIf="formOrg.get('ville').hasError('required') && submited"
-               style="color:#EF5350; margin-left: 70%;">  Requis!</p>
-          </div>
-          <div class="col-4">
-            <label class="sous-lab">Code Postal</label>
-            <input
-              class="form-control"
-              type="number"
-              formControlName="code"
-              placeholder="code">
-            <p *ngIf="formOrg.get('code').hasError('required') && submited"
-               style="color:#EF5350; margin-left: 40%;">  Requis!</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-10">
-            <label class="sous-lab">Rue</label>
-            <input
-              class="form-control"
-              type="text"
-              formControlName="rue">
-            <p *ngIf="formOrg.get('rue').hasError('required') && submited"
-               style="color:#EF5350; margin-left: 80%;">  Requis</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label>Email*</label>
-      <input
-        class="form-control"
-        type="email"
-        formControlName="email"
-        placeholder="email">
-      <p *ngIf="formOrg.get('email').hasError('email') && formOrg.get('email').dirty"
-         style="color:#EF5350; margin-left: 70%;">  Invalide!</p>
-    </div>
-    <div class="form-group row">
-      <label>Site Internet</label>
-      <input
-        class="form-control"
-        type="text"
-        formControlName="site"
-        placeholder="site">
-    </div>
-    <div class="form-group row">
-      <label>Téléphone (ex:0788982659)</label>
-      <input
-        class="form-control"
-        type="email"
-        formControlName="tel">
+<section>
 
-      <p *ngIf="formOrg.get('tel').hasError('isValid')"
-         style="color:#EF5350; margin-left: 70%;">  Invalide</p>
-    </div>
-    <div class="form-group row">
-      <label>nombre de personne</label>
-      <input
-        class="form-control"
-        type="text"
-        formControlName="nbperson">
-    </div>
+<nav>
+<ul>
+	<li> <a (click)="allerHome()">LessonAdvisor</a></li>
+	<li> <a (click)="allerProfil()">Mon profil</a></li>
+	<li> <a (click)="allerOrg()">Poster une sceance de cours</a></li>
+</ul>
+</nav>
 
-    <div class="form-group row">
-      <label>Description</label>
-      <input
-        class="form-control"
-        type="text"
-        formControlName="desc">
-    </div>
-    <div class="form-group row">
-      <label>Photo*</label>
-      <input
-        class="form-control"
-        formControlName="photo">
-      <p *ngIf="formOrg.get('photo').hasError('required') && submited"
-         style="color:#EF5350; margin-left: 85%;"> Requis!</p>
-    </div>
-    <br>
-    <button class="btn btn-primary" type="submit">Ajouter</button>
-    <br>
-    <br>
-  </form>
 
-</div>
+<form [formGroup]='formOrg' (ngSubmit)="creerOrg()" >
+<table>
+	<tr><td class="title" >Informations LessonAdvisor</td></tr>
+	
+	<tr>
+		<td class="label" >Nom :</td>
+		<td> <input type="text" formControlName="name" />*
+			<p *ngIf="formOrg.get('name').hasError('required') && submited">Requis!</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" >
+			<fieldset>
+				<legend>Adresse</legend>
+				<table>
+					<tr>
+						<td class="label" >Ville :</td>
+						<td><input type="text" formControlName="ville" />*
+							<p *ngIf="formOrg.get('ville').hasError('required') && submited">Requis!</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="label" >Code postal :</td>
+						<td><input type="text" formControlName="code" />*
+							<p *ngIf="formOrg.get('code').hasError('required') && submited">Requis!</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="label" >Rue :</td>
+						<td><input type="text" formControlName="rue" />*
+							<p *ngIf="formOrg.get('rue').hasError('required') && submited">Requis!</p>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+		</td>
+	</tr>
+	<tr>
+		<td class="label" >Email :</td>
+		<td> <input type="text" formControlName="email" />*
+			<p *ngIf="formOrg.get('email').hasError('required') && submited">Requis!</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="label" >Site web :</td>
+		<td> <input type="url" formControlName="site" /></td>
+	</tr>
+	<tr>
+		<td class="label" >Telephone :</td>
+		<td> <input type="tel" formControlName="tel" />*
+			<p *ngIf="formOrg.get('tel').hasError('required') && submited">Requis!</p>
+		</td>
+	</tr>
+	<tr>
+		<td class="label" >Nombre de personnes :</td>
+		<td> <input type="text" formControlName="capacity" /></td>
+	</tr>
+	<tr>
+		<td class="label" >Description :</td>
+		<td>
+			<textarea name="desc" rows="10" cols="30" formControlName="desc" ></textarea>
+		</td>
+	</tr>
+	<tr>
+		<td class="label" >Photo :</td>
+		<td> <input type="text" formControlName="photo" /></td>
+	</tr>
+	<tr>
+		<td>*champs obligatoires</td>
+	</tr>
+	<tr>
+		<td><input type="submit" class="user_button" value="Ajouter" /></td>
+	</tr>
+</table>
+</form>
 
-  </div>
-  <div class="row">
-  </div>
-
-</div>
+</section>

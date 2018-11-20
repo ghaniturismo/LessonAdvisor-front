@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Personne} from '../shared/models/Personne';
-import {LogService} from '../shared/services/log-service/log-service.component';
 import {FormControl, FormGroup} from '@angular/forms';
 
+import {Personne} from '../shared/models/Personne';
+import {LogService} from '../shared/services/log-service/log-service.component';
+
+
 @Component({
-  selector: 'app-person-form',
-  templateUrl: './user_profil.component.html',
-  styleUrls: ['./user_profil.component.css','../styles/nav.css','../styles/user_button.css']
+	selector: 'app-person-form',
+	templateUrl: './user_profil.component.html',
+	styleUrls: ['./user_profil.component.css',
+		'../styles/default_background.css','../styles/nav.css','../styles/user_button.css'
+	]
 })
-export class User_profilComponent implements OnInit {
+export class User_profilComponent implements OnInit
+{
 
   public mode: number;
   public user: Personne;
