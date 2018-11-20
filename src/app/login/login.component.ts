@@ -5,7 +5,7 @@ import {FormControl, FormGroup,  Validators} from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css', '../styles/user_button.css']
+  styleUrls: ['./login.component.css', '../styles/default_background.css', '../styles/user_button.css']
 })
 export class LoginComponent implements OnInit {
 
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
 
       if ( (this.formLog.get('email').value === 'person@gmail.com')
            && (this.formLog.get('pwd').value === 'pwd') ) {
-        this.auth = false;
+        this.auth = true;
         this.router.navigate(['home']);
       } else {
         this.auth = false;
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.auth = true;
+    this.auth = false;
     this.submited = false;
     this.formLog = new FormGroup( {
       email: new FormControl('', Validators.required),

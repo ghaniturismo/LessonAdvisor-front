@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup,Validators} from '@angular/forms';
 
 import {Personne} from '../shared/models/Personne';
 import {LogService} from '../shared/services/log-service/log-service.component';
@@ -33,11 +33,11 @@ export class User_profilComponent implements OnInit
 
   ngOnInit() {
     this.formCreate = new FormGroup( {
-      nom: new FormControl(''),
-      ville: new FormControl(''),
+      nom: new FormControl('', Validators.required),
+      ville: new FormControl('', Validators.required),
       tel: new FormControl(''),
-      email: new FormControl(''),
-      pwd: new FormControl(''),
+      email: new FormControl('', Validators.required),
+      pwd: new FormControl('', Validators.required),
       img: new FormControl('')
    } );
   }
@@ -53,22 +53,29 @@ export class User_profilComponent implements OnInit
   }
 
 
-  create (): void {
-    this.user.nom = this.formCreate.get('nom').value;
-    this.user.ville = this.formCreate.get('ville').value;
-    this.user.tel = this.formCreate.get('tel').value;
-    this.user.email = this.formCreate.get('email').value;
-    this.user.passWord = this.formCreate.get('pwd').value;
-    this.user.img = this.formCreate.get('img').value;
-    this.mode = 2;
-
-    this.logService.setCurrentUser(this.user);
-    console.log(this.user.nom);
-
-  }
-
-
-	editer (values: any) : void
+	create (): void
+	{
+		if (
+			this.mode == 1 && this.formCreate.valid
+		&&	this.formCreate.get('pwd').value === this.formCreate.get('pwd2').value
+		&&	this.formCreate.get('email').value === this.formCreate.get('email2').value
+		)
+		{
+			this.user.nom = this.formCreate.get('nom').value;
+			this.user.ville = this.formCreate.get('ville').value;
+			this.user.tel = this.formCreate.get('tel').value;
+			this.user.email = this.formCreate.get('email').value;
+			this.user.passWord = this.formCreate.get('pwd').value;
+			this.user.img = this.formCreate.get('img').value;
+			this.mode = 2;
+			
+			this.logService.setCurrentUser(this.user);
+			console.log(this.user.nom);
+		}
+	}
+	
+	
+	editer () : void
 	{
 		this.mode = 1;
 	}

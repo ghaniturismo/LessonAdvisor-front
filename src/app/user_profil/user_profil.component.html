@@ -10,7 +10,7 @@
 	</ul>
 </nav>
 
-<form [formGroup]="formCreate" (ngSubmit)="create()" >
+<form novalidate [formGroup]="formCreate" (ngSubmit)="create()" >
 <table>
 	<tr>
 		<td colspan="2" *ngIf="mode == 1" class="title" >Nouveau Profil</td>
@@ -18,12 +18,14 @@
 	</tr>
 	<tr>
 		<td class="label" >Nom complet :</td>
-		<td><input *ngIf="mode == 1" formControlName="nom" class="form-control" type="text" placeholder="nom prenom" /></td>
+		<td><input *ngIf="mode == 1" formControlName="nom" class="form-control" type="text" placeholder="nom prenom" />
+        <span *ngIf="mode == 1 && formCreate.get('nom').hasError('required') && submited" class="error" >&lt; Requis!</span></td>
 		<label *ngIf="mode == 2" >{{user.nom}}</label>
 	</tr>
 	<tr>
 		<td class="label" >Ville :</td>
-		<td><input *ngIf="mode == 1" formControlName="ville" class="form-control" type="text" /></td>
+		<td><input *ngIf="mode == 1" formControlName="ville" class="form-control" type="text" />
+        <span *ngIf="mode == 1 && formCreate.get('ville').hasError('required') && submited" class="error" >&lt; Requis!</span></td>
 		<label *ngIf="mode == 2" >{{user.ville}}</label>
 	</tr>
 	<tr>
@@ -33,27 +35,35 @@
 	</tr>
 	<tr>
 		<td class="label" >Email :</td>
-		<td><input *ngIf="mode == 1" formControlName="email" class="form-control" type="text" /></td>
+		<td><input *ngIf="mode == 1" formControlName="email" class="form-control" type="text" />
+        <span *ngIf="mode == 1 && formCreate.get('nom').hasError('required') && submited" class="error" >&lt; Requis!</span></td>
 		<label *ngIf="mode == 2" >{{user.email}}</label>
 	</tr>
 	<tr *ngIf="mode == 1" >
 		<td class="label" >Confirmation Email :</td>
-		<td><input class="form-control" type="email" placeholder="confirme email" /></td>
+		<td><input class="form-control" type="email2" placeholder="confirme email" formControlName="email2" />
+        <span *ngIf="mode == 1 && formCreate.get('email') != formCreate.get('email2') && submited" class="error" >&lt; les emails sont differents !</span></td>
 	</tr>
 	<tr *ngIf="mode == 1">
 		<td class="label" >Mot de passe :</td>
-		<td><input *ngIf="mode == 1" formControlName="pwd" class="form-control" type="password" /></td>
+		<td><input *ngIf="mode == 1" formControlName="pwd" class="form-control" type="password" />
+        <span *ngIf="mode == 1 && formCreate.get('nom').hasError('required') && submited" class="error" >&lt; Requis!</span></td>
 	</tr>
 	<tr *ngIf="mode == 1">
 		<td class="label" >Confirmation du mot de passe :</td>
-		<td><input *ngIf="mode == 1" class="form-control" type="password" /></td>
+		<td><input *ngIf="mode == 1" class="form-control" type="password" formControlName="pwd2" />
+        <span *ngIf="mode == 1 && formCreate.get('pwd') != formCreate.get('pwd2') && submited" class="error" >&lt; les mots de passe sont differents !</span></td>
 	</tr>
 	<tr *ngIf="mode == 1">
 		<td class="label" >Photo :</td>
 		<td><input *ngIf="mode == 1" class="form-control" type="text" placeholder="URL" formControlName="img"/></td>
 	</tr>
-	<input type="submit" *ngIf="mode == 1" class="user_button" value="Valider" />
-	<button *ngIf="mode == 2" class="user_button" (click)="editer(formCreate.value)">Editer</button>
+	<tr><td>* champs obligatoires</td></tr>
+	<tr>
+		<td></td>
+		<td *ngIf="mode == 1" ><input type="submit"  class="user_button" value="Valider" /></td>
+		<td *ngIf="mode == 2" ><button *ngIf="mode == 2" class="user_button" (click)="editer()">Editer</button></td>
+	</tr>
 </table>
 </form>
 
