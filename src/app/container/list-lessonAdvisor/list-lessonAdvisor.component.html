@@ -1,33 +1,36 @@
+<section>
 <ul class="list-group">
   <li class="item-box list-group-item form-group row" *ngFor="let org of Orgs; let index = index">
 
-    <table>
-      <tr>
-        <td>
-            <img class="avatar" src="{{org.img}}">
-        </td>
-        <td>
-              <div class="col-form-label label ">Nom : </div>
-              <div class="col-form-label label ">Contacts : </div>
-              <div class="col-form-label label ">mail: </div>
-              <div class="col-form-label label ">Adresse:</div>
-        </td>
-        <td>
-          <div class="col-form-label label ">{{org.name}}</div>
-          <div class="col-form-label label ">{{org.phone}}</div>
-          <div class="col-form-label label ">{{org.email}}</div>
-          <div class="col-form-label label ">{{org.address }}</div>
-        </td>
-      </tr>
-      <tr>
-        <a  class="nb-btn-circle" (click)="redirigerDetail(index)">
-          <div class="fa"></div>
-          <p>Comments</p>
-          <span class="indicator-dot">6</span>
-        </a>
-      </tr>
-    </table>
+  <table>
+    <tr>
+      <td>
+        <img class="avatar" src="{{org.img}}">
+      </td>
+      <td>
+        <div class="col-form-label label ">Nom : </div>
+        <div class="col-form-label label ">Contacts : </div>
+        <div class="col-form-label label ">mail: </div>
+        <div class="col-form-label label ">Adresse:</div>
+      </td>
+      <td>
+        <div class="col-form-label label ">{{org.name}}</div>
+        <div class="col-form-label label ">{{org.phone}}</div>
+        <div class="col-form-label label ">{{org.email}}</div>
+        <div class="col-form-label label ">{{org.address }}</div>
+      </td>
+    </tr>
+    <tr>
+      <a  class="nb-btn-circle" (click)="redirigerDetail(index)">
+        <div class="fa"></div>
+        <p>Comments</p>
+        <span class="indicator-dot">6</span>
+      </a>
+    </tr>
+  </table>
+
 
   </li>
 
 </ul>
+</section>

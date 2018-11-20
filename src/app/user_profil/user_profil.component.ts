@@ -9,8 +9,7 @@ import {LogService} from '../shared/services/log-service/log-service.component';
 @Component({
 	selector: 'app-person-form',
 	templateUrl: './user_profil.component.html',
-	styleUrls: ['./user_profil.component.css',
-		'../styles/default_background.css','../styles/nav.css','../styles/user_button.css'
+	styleUrls: ['./user_profil.component.css', '../styles/default_background.css', '../styles/nav.css', '../styles/user_button.css'
 	]
 })
 export class User_profilComponent implements OnInit
