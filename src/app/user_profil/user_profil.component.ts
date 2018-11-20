@@ -49,12 +49,11 @@ export class User_profilComponent implements OnInit
     this.router.navigate(['profil', 2]);
   }
   allerOrg(): void {
-    this.router.navigate(['org']);
+    this.router.navigate(['addlesson']);
   }
 
 
-  create () : void
-  {
+  create (): void {
     this.user.nom = this.formCreate.get('nom').value;
     this.user.ville = this.formCreate.get('ville').value;
     this.user.tel = this.formCreate.get('tel').value;

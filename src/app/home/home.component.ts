@@ -16,7 +16,6 @@ export class HomeComponent implements OnInit {
   redirigerList(): void {
     this.router.navigate(['lessonadvisor/list']);
   }
-
   allerHome(): void {
     this.router.navigate(['home']);
   }
@@ -24,6 +23,6 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['profil', 2]);
   }
   allerOrg(): void {
-    this.router.navigate(['org']);
+    this.router.navigate(['addlesson']);
   }
 }

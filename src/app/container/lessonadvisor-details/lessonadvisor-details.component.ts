@@ -3,16 +3,16 @@ import {LessonPlace} from '../../shared/models/lessonPlace';
 import {OrgService} from '../../shared/services/org-service/org-service.component';
 import {ActivatedRoute, Router} from '@angular/router';
 import {LogService} from '../../shared/services/log-service/log-service.component';
-import {Comment} from "../../shared/models/Comment";
-import {Personne} from "../../shared/models/Personne";
+import {Comment} from '../../shared/models/Comment';
+import {Personne} from '../../shared/models/Personne';
 
 
 @Component({
   selector: 'app-org-details',
-  templateUrl: './org-details.component.html',
-  styleUrls: ['./org-details.component.css']
+  templateUrl: './lessonadvisor-details.component.html',
+  styleUrls: ['./lessonadvisor-details.component.css']
 })
-export class OrgDetailsComponent implements OnInit {
+export class LessonadvisorDetailsComponent implements OnInit {
 
   public org: LessonPlace;
   public user: Personne;

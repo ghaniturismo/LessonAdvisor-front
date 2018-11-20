@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ListLessonAdvisorComponent } from './container/list-lessonAdvisor/list-lessonAdvisor.component';
 import { ContainerComponent } from './container/container.component';
-import { OrgDetailsComponent } from './container/org-details/org-details.component';
+import { LessonadvisorDetailsComponent } from './container/lessonadvisor-details/lessonadvisor-details.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { User_profilComponent } from './user_profil/user_profil.component';
 import { HomeComponent } from './home/home.component';
@@ -19,7 +19,7 @@ import {APP_ROUTES} from './app.routes';
     AppComponent,
     ListLessonAdvisorComponent,
     ContainerComponent,
-    OrgDetailsComponent,
+    LessonadvisorDetailsComponent,
     User_profilComponent,
     LessonPlace_formComponent,
     HomeComponent,
