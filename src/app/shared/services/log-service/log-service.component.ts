@@ -10,7 +10,7 @@ export class LogService implements OnInit {
 
   constructor() {
     this.user.next(new Personne( 'Wilson', 'Nicky', 'niki.wil@gmail.com', '07 25 36 28 24', 'Enseignant', 'Nancy',
-      'https://www.nancy.fr/fileadmin/_processed_/6/2/csm_2016-06-inauguration-creche-familiale_c2d58cb2af.jpg', ''));
+      'https://nospensees.fr/wp-content/uploads/2017/02/hombre-enfadado.jpg', ''));
   }
 
   ngOnInit() {
