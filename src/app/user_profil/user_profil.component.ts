@@ -7,7 +7,7 @@ import {FormControl, FormGroup} from '@angular/forms';
 @Component({
   selector: 'app-person-form',
   templateUrl: './user_profil.component.html',
-  styleUrls: ['./user_profil.component.css']
+  styleUrls: ['./user_profil.component.css','../styles/nav.css','../styles/user_button.css']
 })
 export class User_profilComponent implements OnInit {
 
@@ -44,12 +44,13 @@ export class User_profilComponent implements OnInit {
   allerProfil(): void {
     this.router.navigate(['profil', 2]);
   }
-  allercreche(): void {
+  allerOrg(): void {
     this.router.navigate(['org']);
   }
 
 
-  editer(): void {
+  create () : void
+  {
     this.user.nom = this.formCreate.get('nom').value;
     this.user.ville = this.formCreate.get('ville').value;
     this.user.tel = this.formCreate.get('tel').value;
@@ -62,6 +63,5 @@ export class User_profilComponent implements OnInit {
     console.log(this.user.nom);
 
   }
-
 
 }
