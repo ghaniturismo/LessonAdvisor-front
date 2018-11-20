@@ -1,43 +1,40 @@
 .global-container{
   font-family: Arial, sans-serif;
-  background-image: url("../../assets/img/font4.jpg");
-  height: 668px;
-  max-height: 668px;
-  overflow-x: hidden;
+  background-image: url("../../assets/img/login.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .panel{
   border: 0px solid #fff;
-  -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
-  -moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
-  box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.60);
+  -moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.60);
+  box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.60);
   background-color: rgba(0,0,0,0.5);
   color: #ffffff;
-  padding-top: 70px;
-  border-radius: 10%;
+  padding-top: 9%;
+  border-radius: 5%;
   position: relative;
   transition: 1s;
 }
 h5{
-  text-align: center;
-  color: #F9DF05 ;
-  margin-left: 10px;
-  margin-right: 10px;
+  text-align: right;
+  color: #f93d4d;
+  margin-left: 5px;
+  margin-right: 50px;
 }
 .panel:hover{
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.0);
 }
 .lock{
   position: absolute;
-  top: -50px;
+  top: 20px;
   width: 100px;
   height: 100px;
-  line-height: 112px;
+  line-height: 100px;
   text-align: center;
-  left: 37%;
+  left: 0%;
   background: rgba(0,0,0,0.1) !important;
-  border: 3px outset #F9DF05;
+  border: 3px outset #23daf9;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   -ms-border-radius: 100%;

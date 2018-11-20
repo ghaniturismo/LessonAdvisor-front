@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
            && (this.formLog.get('pwd').value === 'pwd') ) {
         this.auth = false;
         this.router.navigate(['home']);
-      }else {
+      } else {
         this.auth = false;
       }
     }

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { ListGarderieComponent } from './container/list-garderie/list-garderie.component';
+import { ListLessonAdvisorComponent } from './container/list-lessonAdvisor/list-lessonAdvisor.component';
 import { ContainerComponent } from './container/container.component';
 import { OrgDetailsComponent } from './container/org-details/org-details.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -17,7 +17,7 @@ import {APP_ROUTES} from './app.routes';
 @NgModule({
   declarations: [
     AppComponent,
-    ListGarderieComponent,
+    ListLessonAdvisorComponent,
     ContainerComponent,
     OrgDetailsComponent,
     User_profilComponent,

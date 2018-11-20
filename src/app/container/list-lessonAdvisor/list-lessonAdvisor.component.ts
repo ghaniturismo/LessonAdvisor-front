@@ -5,10 +5,10 @@ import {OrgService} from '../../shared/services/org-service/org-service.componen
 
 @Component({
   selector: 'app-list-garderie',
-  templateUrl: './list-garderie.component.html',
-  styleUrls: ['./list-garderie.component.css']
+  templateUrl: './list-lessonAdvisor.component.html',
+  styleUrls: ['./list-lessonAdvisor.component.css']
 })
-export class ListGarderieComponent implements OnInit {
+export class ListLessonAdvisorComponent implements OnInit {
   Orgs: LessonPlace[];
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private orgService: OrgService) {

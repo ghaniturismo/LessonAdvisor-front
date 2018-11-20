@@ -4,22 +4,28 @@
 
 		<header>Bienvenue sur LessonAdvisor </header>
 		<hr>
-		
+
 		<form novalidate [formGroup]="formLog" (ngSubmit)="authentifier()" >
 		<table>
-			<tr> <td class="label"> Email :</td> <td><input type="text" class="form-control" formControlName="email" ></td>
-			<td *ngIf="formLog.get('email').hasError('required') && submited" class="error" >&lt; Requis!</td>
+			<tr>
+        <td class="label"> Email :</td> <td><input type="text" class="form-control" formControlName="email" ></td>
+			  <td *ngIf="formLog.get('email').hasError('required') && submited" class="error" >&lt; Requis!</td>
 			</tr>
-			
+
 			<tr>
 				<td class="label"> Mot de passe :</td> <td><input type="text" class="form-control" formControlName="pwd" ></td>
-				<td><input type="submit" class="buttunLogin" value="Login" ></td>
+        <td *ngIf="formLog.get('pwd').hasError('required') && submited" class="error" >&lt; Requis!</td>
 			</tr>
-			<tr *ngIf="formLog.get('email').hasError('required') && submited" >
-				<td colspan="3" class="error" >Requis!</td>
-			</tr>
-			<tr><td colspan="3"><hr/></td></tr>
+
+      <tr>
+        <td><input type="submit" class="buttunLogin" value="Login" ></td>
+      </tr>
+
 			<tr>
+        <td colspan="3"><hr/></td>
+      </tr>
+
+      <tr>
 				<td  colspan="2" >Pas encore de compte ?</td>
 				<td (click)="creerCompte()" class="reg" >S'enregistrer</td>
 			</tr>
