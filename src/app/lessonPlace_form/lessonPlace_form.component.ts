@@ -1,16 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+
 import {LessonPlace} from '../shared/models/lessonPlace';
 import {Adresse} from '../shared/models/Adresse';
 import {OrgService} from '../shared/services/org-service/org-service.component';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+
 
 @Component({
-  selector: 'app-org-form',
-  templateUrl: './lessonPlace_form.component.html',
-  styleUrls: ['./lessonPlace_form.component.css']
+	selector: 'app-org-form',
+	templateUrl: './lessonPlace_form.component.html',
+	styleUrls: ['./lessonPlace_form.component.css',
+		'../styles/background_org.css','../styles/nav.css','../styles/user_button.css'
+	]
 })
-export class LessonPlace_formComponent implements OnInit {
+export class LessonPlace_formComponent implements OnInit
+{
   public formOrg: FormGroup;
   public org: LessonPlace;
   public adr: Adresse;
@@ -55,7 +60,7 @@ export class LessonPlace_formComponent implements OnInit {
     }
   }
 
-  creerCreche(): void {
+  creerOrg(): void {
     this.submited = true;
     if (this.formOrg.get('name').valid &&
       this.formOrg.get('ville').valid &&
@@ -93,7 +98,7 @@ export class LessonPlace_formComponent implements OnInit {
   allerProfil(): void {
     this.router.navigate(['profil', 2]);
   }
-  allercreche(): void {
+  allerOrg(): void {
     this.router.navigate(['org']);
   }
 
