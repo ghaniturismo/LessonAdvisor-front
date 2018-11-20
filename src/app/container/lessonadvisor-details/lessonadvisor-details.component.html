@@ -4,7 +4,7 @@
             <img class="avatar" src="{{ org.img }}">
             <a class="nb-btn-cloud info-mar" (click)="infoSection=true;">
               <img src="../../../assets/img/info.png" class="fa">
-              <p>Informations</p>
+              <p>Plus d'information</p>
             </a>
             <a class="nb-btn-cloud discuss-marg" (click)="infoSection=false;">
               <img src="../../../assets/img/5982-200.png" class="fa cms">
@@ -12,11 +12,12 @@
             </a>
     </div>
   </div>
+
+
   <div class="row detail tab-container" id="style-1" *ngIf="infoSection">
     <div class="col-6">
       <div class=" row control-container">
         <div class="col-1"></div>
-        <label class=" col-2 label-title">Nom</label>
         <label class=" col-9 label-contentent"> {{ org.name }}</label>
       </div>
       <br>
@@ -37,21 +38,12 @@
           <img src="../../../assets/img/contact.png" class="fa">
         </a>
         <div class="col-7">
-          <span class="label row">Tel   : {{org.phone}}</span>
-          <span class="label row">Email : {{org.email}} </span>
-          <span class="label row">site  : {{org.website}} </span>
+          <span class="label row">Tel   : {{org.phone}}</span><br>
+          <span class="label row">Email : {{org.email}} </span><br>
+          <span class="label row">site  : {{org.website}} </span><br>
         </div>
       </div>
       <br>
-      <div class="row">
-        <div class="col-1"></div>
-        <a class="avatar2 col-2">
-          <img src="../../../assets/img/Calendar-Time.png" class="fa">
-        </a>
-        <div class="col-7">
-          <span class="label row">{{org.openingHours}} </span>
-        </div>
-      </div>
     </div>
     <div class="col-6">
       <br>
@@ -65,26 +57,7 @@
         </div>
       </div>
       <br>
-      <div class="row">
-        <div class="col-1"></div>
-        <a class="avatar2 col-2">
-          <img src="../../../assets/img/personel.png" class="fa">
-        </a>
-        <div class="col-6 ">
-          <span class="label row"> {{org.staffNumber}}</span>
-        </div>
-      </div>
 
-      <br>
-      <div class="row">
-        <div class="col-1"></div>
-        <a class="avatar2 col-2">
-          <img src="../../../assets/img/candition.svg" class="fa">
-        </a>
-        <div class="col-6 ">
-          <span class="label row"> {{org.admissionConditions}}. La limite d'age est : {{org.ageLimits}}  </span>
-        </div>
-      </div>
       <br>
 
     </div>

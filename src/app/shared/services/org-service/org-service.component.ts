@@ -11,8 +11,6 @@ export class OrgService implements OnInit {
 
   constructor() {
     const user = new Personne('Wilson Nicky', '', 'niki.wil@gmail.com', '07 25 36 28 24', 'Enseignant', 'Nancy', 'https://www.nancy.fr/fileadmin/_processed_/6/2/csm_2016-06-inauguration-creche-familiale_c2d58cb2af.jpg', '');
-    const adr = new Adresse ('Laxoviennes', 54520, 'vendoeuvres');
-    const comments = new Comment(  3, 'Crèche à service moyen', user);
 
     this.Orgs.next(
       [
@@ -27,6 +25,7 @@ export class OrgService implements OnInit {
                           '',
                            20,
                            '6', null),
+
         new LessonPlace('Jess',
           '23, site province, Laxou, 54520',
           'https://cdn.pixabay.com/photo/2017/12/31/15/56/portrait-3052641_960_720.jpg',
