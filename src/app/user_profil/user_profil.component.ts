@@ -37,12 +37,20 @@ export class User_profilComponent implements OnInit
       ville: new FormControl('', Validators.required),
       tel: new FormControl(''),
       email: new FormControl('', Validators.required),
+      email2: new FormControl('', Validators.required),
       pwd: new FormControl('', Validators.required),
+      pwd2: new FormControl('', Validators.required),
       img: new FormControl('')
    } );
   }
 
   create (): void {
+	  console.log(this.formCreate.get('email').value);
+	  console.log(this.formCreate.get('email2').value);
+	  if ( this.formCreate.valid
+	  &&	this.formCreate.get('email').value == this.formCreate.get('email2').value
+	  )
+	  {
         this.user.nom = this.formCreate.get('nom').value;
         this.user.ville = this.formCreate.get('ville').value;
         this.user.tel = this.formCreate.get('tel').value;
@@ -53,6 +61,7 @@ export class User_profilComponent implements OnInit
 
         this.logService.setCurrentUser(this.user);
 			  console.log(this.user.nom);
+  }
 	}
 
 	editer (): void
