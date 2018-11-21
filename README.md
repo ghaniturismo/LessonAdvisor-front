@@ -15,3 +15,18 @@
 
 
 ```
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) @angular/cli 7.0.6
+
+## Installation
+
+
+### Frontend
+
+Run frontend application:
+```
+git clone https://github.com/ghaniturismo/LessonAdvisor-front
+cd LessonAdvisor-front
+yarn install
+yarn run start
+```
+The application should be accessible at `localhost:4200`.

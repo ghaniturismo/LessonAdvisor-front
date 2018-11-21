@@ -11,11 +11,10 @@ import {OrgService} from '../shared/services/org-service/org-service.component';
 	selector: 'app-org-form',
 	templateUrl: './lessonPlace_form.component.html',
 	styleUrls: ['./lessonPlace_form.component.css',
-		'../styles/background_org.css','../styles/nav.css','../styles/user_button.css'
+		'../styles/background_org.css', '../styles/nav.css', '../styles/user_button.css'
 	]
 })
-export class LessonPlace_formComponent implements OnInit
-{
+export class LessonPlace_formComponent implements OnInit {
   public formOrg: FormGroup;
   public org: LessonPlace;
   public adr: Adresse;
@@ -42,19 +41,16 @@ export class LessonPlace_formComponent implements OnInit
       effect: new FormControl('', Validators.min(0)),
       photo: new FormControl('', Validators.required)
     } );
-
-
-
   }
 
 
   validator_tel(element: FormControl): {[s: string]: boolean} {
     if (isNaN(element.value)) {
       return { isValid: true };
-    }else {
+    } else {
       if ( element.value.length === 0 || element.value.length === 10  ) {
         return { isValid: false };
-      }else {
+      } else {
         return { isValid: true };
       }
     }
@@ -88,7 +84,7 @@ export class LessonPlace_formComponent implements OnInit
         this.formOrg.get('age').value,
         null);
       this.orgService.createOrg(this.org);
-      this.router.navigate(['espaceCreche/list']);
+      this.router.navigate(['lessonadvisor/list']);
     }
   }
 

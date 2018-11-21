@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {FormControl, FormGroup,Validators} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 import {Personne} from '../shared/models/Personne';
 import {LogService} from '../shared/services/log-service/log-service.component';
@@ -22,7 +22,7 @@ export class User_profilComponent implements OnInit
   constructor(private router: Router, private activatedRoute: ActivatedRoute,
               private logService: LogService) {
     this.mode = this.activatedRoute.snapshot.params.mode;
-    if (this.mode == 2) {
+    if (this.mode === 2) {
       this.logService.getCurrentUser().subscribe( (value: Personne) => {
         this.user = value;
       });
@@ -42,40 +42,20 @@ export class User_profilComponent implements OnInit
    } );
   }
 
-  allerHome(): void {
-    this.router.navigate(['home']);
-  }
-  allerProfil(): void {
-    this.router.navigate(['profil', 2]);
-  }
-  allerOrg(): void {
-    this.router.navigate(['addlesson']);
-  }
+  create (): void {
+        this.user.nom = this.formCreate.get('nom').value;
+        this.user.ville = this.formCreate.get('ville').value;
+        this.user.tel = this.formCreate.get('tel').value;
+        this.user.email = this.formCreate.get('email').value;
+        this.user.passWord = this.formCreate.get('pwd').value;
+        this.user.img = this.formCreate.get('img').value;
+        this.mode = 2;
 
-
-	create (): void
-	{
-		if (
-			this.mode == 1 && this.formCreate.valid
-		&&	this.formCreate.get('pwd').value === this.formCreate.get('pwd2').value
-		&&	this.formCreate.get('email').value === this.formCreate.get('email2').value
-		)
-		{
-			this.user.nom = this.formCreate.get('nom').value;
-			this.user.ville = this.formCreate.get('ville').value;
-			this.user.tel = this.formCreate.get('tel').value;
-			this.user.email = this.formCreate.get('email').value;
-			this.user.passWord = this.formCreate.get('pwd').value;
-			this.user.img = this.formCreate.get('img').value;
-			this.mode = 2;
-			
-			this.logService.setCurrentUser(this.user);
-			console.log(this.user.nom);
-		}
+        this.logService.setCurrentUser(this.user);
+			  console.log(this.user.nom);
 	}
-	
-	
-	editer () : void
+
+	editer (): void
 	{
 		this.mode = 1;
 	}
