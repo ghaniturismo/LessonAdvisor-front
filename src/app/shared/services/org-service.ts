@@ -1,6 +1,6 @@
 import {Injectable, OnInit} from '@angular/core';
 import {LessonPlace} from '../models/lessonPlace';
-import { BehaviorSubject } from 'rxjs';
+import {BehaviorSubject } from 'rxjs';
 import {Adresse} from '../models/Adresse';
 import {Comment} from '../models/Comment';
 import {Personne} from '../models/Personne';
@@ -37,9 +37,20 @@ export class OrgService implements OnInit {
           '',
           20,
           '6', null),
+
+        new LessonPlace('Tarek',
+          '11, site province, Paris, 75017',
+          'http://www.legorafi.fr/wp-content/uploads/2016/09/iStock_84615769_SMALL-e1474531457886-820x410.jpg',
+          'mathinfo@gmail.com', '06 05 89 32 36', 'http://www.rue89strasbourg.com',
+          new Adresse ('Laxoviennes', 54520, 'vendoeuvres'),
+          'blabla expliquant ce que la personne vas faire dans son cours',
+          0,
+          '09h-12h',
+          '',
+          20,
+          '6', null),
   ]
   );
-
      }
 
   ngOnInit() {
