@@ -25,7 +25,7 @@ export class NavComponent implements OnInit
 		this.router.navigate(['profil', 2]);
 	}
 	allerOrg(): void {
-		this.router.navigate(['org']);
+		this.router.navigate(['addlesson']);
 	}
 	
 
