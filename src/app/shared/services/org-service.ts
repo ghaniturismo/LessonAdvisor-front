@@ -1,9 +1,9 @@
 import {Injectable, OnInit} from '@angular/core';
-import {LessonPlace} from '../../models/lessonPlace';
+import {LessonPlace} from '../models/lessonPlace';
 import { BehaviorSubject } from 'rxjs';
-import {Adresse} from '../../models/Adresse';
-import {Comment} from '../../models/Comment';
-import {Personne} from '../../models/Personne';
+import {Adresse} from '../models/Adresse';
+import {Comment} from '../models/Comment';
+import {Personne} from '../models/Personne';
 
 @Injectable()
 export class OrgService implements OnInit {

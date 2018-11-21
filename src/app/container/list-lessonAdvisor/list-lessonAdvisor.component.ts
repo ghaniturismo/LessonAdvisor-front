@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {LessonPlace} from '../../shared/models/lessonPlace';
 import {ActivatedRoute, Router} from '@angular/router';
-import {OrgService} from '../../shared/services/org-service/org-service.component';
+import {OrgService} from '../../shared/services/org-service';
 
 @Component({
   selector: 'app-list-garderie',

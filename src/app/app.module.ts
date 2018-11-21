@@ -10,8 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NavComponent } from './nav/nav.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { LogService } from './shared/services/log-service/log-service.component';
-import { OrgService } from './shared/services/org-service/org-service.component';
+import { LogService } from './shared/services/log-service';
+import { OrgService } from './shared/services/org-service';
 import {LessonPlace_formComponent} from './lessonPlace_form/lessonPlace_form.component';
 import {APP_ROUTES} from './app.routes';
 

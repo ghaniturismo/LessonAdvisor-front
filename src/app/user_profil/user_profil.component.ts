@@ -3,7 +3,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 import {Personne} from '../shared/models/Personne';
-import {LogService} from '../shared/services/log-service/log-service.component';
+import {LogService} from '../shared/services/log-service';
 
 
 @Component({

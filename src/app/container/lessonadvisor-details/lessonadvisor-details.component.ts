@@ -1,8 +1,8 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {LessonPlace} from '../../shared/models/lessonPlace';
-import {OrgService} from '../../shared/services/org-service/org-service.component';
+import {OrgService} from '../../shared/services/org-service';
 import {ActivatedRoute, Router} from '@angular/router';
-import {LogService} from '../../shared/services/log-service/log-service.component';
+import {LogService} from '../../shared/services/log-service';
 import {Comment} from '../../shared/models/Comment';
 import {Personne} from '../../shared/models/Personne';
 

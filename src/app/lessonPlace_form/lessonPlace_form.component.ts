@@ -4,7 +4,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 import {LessonPlace} from '../shared/models/lessonPlace';
 import {Adresse} from '../shared/models/Adresse';
-import {OrgService} from '../shared/services/org-service/org-service.component';
+import {OrgService} from '../shared/services/org-service';
 
 
 @Component({
