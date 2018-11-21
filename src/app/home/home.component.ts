@@ -1,28 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['../styles/nav.css', './home.component.css']
+  styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit
+{
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
-
-  ngOnInit() {
-  }
-
-  redirigerList(): void {
-    this.router.navigate(['lessonadvisor/list']);
-  }
-  allerHome(): void {
-    this.router.navigate(['home']);
-  }
-  allerProfil(): void {
-    this.router.navigate(['profil', 2]);
-  }
-  allerOrg(): void {
-    this.router.navigate(['addlesson']);
-  }
+	
+	constructor(private router: Router, private activatedRoute: ActivatedRoute)
+	{}
+	
+	ngOnInit()
+	{}
+	
+	
+	redirigerList () : void {
+		this.router.navigate(['lessonadvisor/list']);
+	}
+	
+	allerOrg () : void {
+		this.router.navigate(['addlesson']);
+	}
 }

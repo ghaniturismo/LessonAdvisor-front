@@ -1,14 +1,7 @@
 
 <section>
 
-<nav>
-<br>
-	<ul>
-	<li> <a (click)="allerHome()">LessonAdvisor</a></li>
-	<li> <a (click)="allerProfil()">Mon profil</a></li>
-	<li> <a (click)="allerOrg()">Poster une sceance de cours</a></li>
-	</ul>
-</nav>
+<app-nav></app-nav>
 
 <form novalidate [formGroup]="formCreate" (ngSubmit)="create()" >
 <table>
@@ -62,7 +55,7 @@
 	<tr>
 		<td></td>
 		<td *ngIf="mode == 1" ><input type="submit"  class="user_button" value="Valider" /></td>
-		<td *ngIf="mode == 2" ><button *ngIf="mode == 2" class="user_button" (click)="editer()">Editer</button></td>
+		<td *ngIf="mode == 2" ><button class="user_button" (click)="editer()">Editer</button></td>
 	</tr>
 </table>
 </form>

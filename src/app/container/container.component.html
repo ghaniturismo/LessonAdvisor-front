@@ -1,21 +1,5 @@
-<section>
-  <div class="list-background" id="style-1">
-    <div id="nav">
-      <div id="nav-wrapper">
-        <br>
-        <ul>
-          <li> <a (click)="allerHome()">LessonAdvisor</a></li>
-          <li> <a (click)="allerProfil()">Mon profil</a></li>
-          <li> <a (click)="allercreche()">Poster</a></li>
-        </ul>
-      </div>
-    </div>
-    <br>
-    <div class="row" >
-      <router-outlet></router-outlet>
-    </div>
-    <div class="row">
-    </div>
 
-  </div>
+<section>
+	<app-nav></app-nav>
+	<router-outlet></router-outlet>
 </section>

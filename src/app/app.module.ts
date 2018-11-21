@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { User_profilComponent } from './user_profil/user_profil.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { NavComponent } from './nav/nav.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { LogService } from './shared/services/log-service/log-service.component';
 import { OrgService } from './shared/services/org-service/org-service.component';
@@ -23,7 +24,8 @@ import {APP_ROUTES} from './app.routes';
     User_profilComponent,
     LessonPlace_formComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+	NavComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -41,4 +43,5 @@ import {APP_ROUTES} from './app.routes';
     AppComponent
   ]
 })
-export class AppModule { }
+export class AppModule
+{}

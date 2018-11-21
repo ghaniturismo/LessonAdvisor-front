@@ -92,14 +92,6 @@ export class LessonPlace_formComponent implements OnInit
     }
   }
 
-  allerHome(): void {
-    this.router.navigate(['home']);
-  }
-  allerProfil(): void {
-    this.router.navigate(['profil', 2]);
-  }
-  allerOrg(): void {
-    this.router.navigate(['org']);
-  }
+
 
 }
