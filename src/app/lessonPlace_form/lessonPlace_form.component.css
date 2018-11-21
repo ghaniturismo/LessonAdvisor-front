@@ -30,7 +30,12 @@ form
 	background: rgba(0,0,0,0.5);
 	box-shadow: -1px 4px 26px 2px rgba(0,0,0,0.75);
 }
-
+.error
+{
+  color: #ef2321;
+  text-align: center;
+  margin-left: 20%;
+}
 .label
 {
 	text-align: right;
