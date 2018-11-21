@@ -1,19 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({
   selector: 'app-nav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css', '../styles/nav.css']
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css', '../styles/nav.css']
 })
-export class NavComponent implements OnInit
-{
+export class HeaderComponent implements OnInit {
+  constructor(private router: Router) {}
 
-	
-	constructor(private router: Router, private activatedRoute: ActivatedRoute) 
-	{}
-	
 	ngOnInit()
 	{}
 

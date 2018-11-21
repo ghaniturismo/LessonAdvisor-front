@@ -52,7 +52,6 @@ export class OrgService implements OnInit {
   ]
   );
      }
-
   ngOnInit() {
   }
 

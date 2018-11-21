@@ -8,7 +8,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { User_profilComponent } from './user_profil/user_profil.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { NavComponent } from './nav/nav.component';
+import { HeaderComponent } from './header/header.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { LogService } from './shared/services/log-service';
 import { OrgService } from './shared/services/org-service';
@@ -25,7 +25,7 @@ import {APP_ROUTES} from './app.routes';
     LessonPlace_formComponent,
     HomeComponent,
     LoginComponent,
-	NavComponent
+	HeaderComponent
   ],
   imports: [
     BrowserAnimationsModule,
