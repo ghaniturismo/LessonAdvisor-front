@@ -10,9 +10,9 @@
   </tr>
 	
 	<tr>
-		<td class="label" >Nom :</td>
+		<td class="label" >sNom :</td>
 		<td> <input type="text" formControlName="name" />*
-			<p *ngIf="formOrg.get('name').hasError('required') && submited">Requis!</p>
+			<p class="error" *ngIf="formOrg.get('name').hasError('required') && submited">Requis!</p>
 		</td>
 	</tr>
 	<tr>
@@ -23,19 +23,19 @@
 					<tr>
 						<td class="label" >Ville :</td>
 						<td><input type="text" formControlName="ville" />*
-							<p *ngIf="formOrg.get('ville').hasError('required') && submited">Requis!</p>
+							<p class="error"*ngIf="formOrg.get('ville').hasError('required') && submited">Requis!</p>
 						</td>
 					</tr>
 					<tr>
 						<td class="label" >Code postal :</td>
 						<td><input type="text" formControlName="code" />*
-							<p *ngIf="formOrg.get('code').hasError('required') && submited">Requis!</p>
+							<p class="error" *ngIf="formOrg.get('code').hasError('required') && submited">Requis!</p>
 						</td>
 					</tr>
 					<tr>
 						<td class="label" >Rue :</td>
 						<td><input type="text" formControlName="rue" />*
-							<p *ngIf="formOrg.get('rue').hasError('required') && submited">Requis!</p>
+							<p class="error" *ngIf="formOrg.get('rue').hasError('required') && submited">Requis!</p>
 						</td>
 					</tr>
 				</table>
